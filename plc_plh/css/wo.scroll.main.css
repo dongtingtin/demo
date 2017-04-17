@@ -1,0 +1,45 @@
+.wo-scrroll{position: absolute; display: none;}
+.wo-center{left: 9%;z-index: 99}
+.wo-scrrollleft{left:-15%;transform:scale(.7);z-index: 97}
+.wo-scrrollright{left:31%;transform:scale(.7);z-index: 98; }
+.wo-index{z-index: 10}
+
+.li-dian{position: absolute; bottom: 0; width: 60px; text-align: center}
+
+.li-dian ul{ text-align: center}
+.li-dian li{width: 8px; height: 8px; background-color: #ffffff; border-radius: 4px; float: left; margin-left: 12px}
+.li-dian li.ling{background-color: #000000}
+
+.anime-left {  -webkit-animation: solleft .6s ease both;  animation: solleft .6s ease both;  }
+.anime-right {  -webkit-animation: solright .6s ease both;  animation: solright .6s ease both;  }
+.anime-center {  -webkit-animation: solcenter .6s ease both;  animation: solcenter .6s ease both;  }
+@-webkit-keyframes solleft {
+    0% {transform:scale(1)}
+    50% {left:-100%;transform:scale(.85)}
+    100% {left:-15%;transform:scale(.7);z-index: 10}
+}
+@keyframes solleft {
+    0% {transform:scale(1)}
+    50% {left:-100%;transform:scale(.85)}
+    100% {left:-15%;transform:scale(.7);z-index: 10}
+}
+
+@-webkit-keyframes solcenter {
+    0% {transform:scale(.7)}
+    100% {left: 9%;transform:scale(1)}
+}
+@keyframes solcenter {
+    0% {transform:scale(.7)}
+    100% {left: 9%;transform:scale(1)}
+}
+
+@-webkit-keyframes solright {
+    0% {transform:scale(1)}
+    50% {left:100%;transform:scale(.85);z-index: 10}
+    100% {left:31%;transform:scale(.7)}
+}
+@keyframes solright {
+    0% {transform:scale(1)}
+    50% {left:100%;transform:scale(.85);z-index: 10}
+    100% {left:31%;transform:scale(.7)}
+}
