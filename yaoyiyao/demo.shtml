@@ -45,7 +45,7 @@ DTD/xhtml1-strict.dtd">
                 if (speed > SHAKE_THRESHOLD) {
                     alert("shaked");
                     if (!media.src) {
-                        media.src = "http://192.168.1.106/weixin_yaoyiyao.mp3"
+                        media.src = "https://y.qq.com/portal/player.html"
                     }
                     media.play();
                 }
