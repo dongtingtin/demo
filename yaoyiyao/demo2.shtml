@@ -14,7 +14,7 @@
     var shakeSpeed = 800;//设置阈值
     var media;
     function init() {
-        last_update = new Date().getTime();
+        lastTime = new Date().getTime();
         media = document.getElementById('musicBox');
         if (window.DeviceMotionEvent) {//判断设备是否支持运动传感事件。
             window.addEventListener('devicemotion', shake, false);//如果支持，那么就绑定shake方法到事件上
