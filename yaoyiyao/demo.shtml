@@ -45,7 +45,7 @@ DTD/xhtml1-strict.dtd">
                 if (speed > SHAKE_THRESHOLD) {
                     alert("shaked");
                     if (!media.src) {
-                        media.src = "music.mp3"
+                        media.src = "if you.mp3"
                     }
                     media.play();
                 }
