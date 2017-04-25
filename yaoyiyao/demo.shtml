@@ -5,33 +5,25 @@ DTD/xhtml1-strict.dtd">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,
-&nbsp;maximum-scale=2.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,&nbsp;maximum-scale=2.0" />
     <meta name="MobileOptimized" content="240" />
     <title>HTML摇一摇。。。</title>
-
-
     <script type="text/javascript">
         var SHAKE_THRESHOLD = 3000;
         var last_update = 0;
         var x = y = z = last_x = last_y = last_z = 0;
         var media;
-
         function init() {
             last_update = new Date().getTime();
             media = document.getElementById("musicBox");
             if (window.DeviceMotionEvent) {
                 window.addEventListener('devicemotion', deviceMotionHandler, false);
             } else {
-
                 alert('not support mobile event');
             }
         }
-
         function deviceMotionHandler(eventData) {
-
             var acceleration = eventData.accelerationIncludingGravity;
-
             var curTime = new Date().getTime();
             if ((curTime - last_update) > 100) {
                 var diffTime = curTime - last_update;
@@ -41,7 +33,6 @@ DTD/xhtml1-strict.dtd">
                 z = acceleration.z;
                 var speed = Math.abs(x + y + z - last_x - last_y - last_z) /
                     diffTime * 10000;
-
                 if (speed > SHAKE_THRESHOLD) {
                     alert("shaked");
                     if (!media.src) {
@@ -53,11 +44,8 @@ DTD/xhtml1-strict.dtd">
                 last_y = y;
                 last_z = z;
             }
-
         }
     </script>
-
-
 </head>
 
 <body onload="init()">
