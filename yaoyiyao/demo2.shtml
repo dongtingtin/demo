@@ -37,6 +37,10 @@
             var speed = Math.abs(x + y + z - lastX - lastY - lastZ) / diffTime * 10000;
             if (speed > shakeSpeed) {//如果计算出来的速度超过了阈值，那么就算作用户成功摇一摇
                 alert("shaked");//这里就是放置如果用户成功的摇一摇，将要触发的事件，例如提示摇到了谁，摇到了多少金币等等
+                if (!media.src) {
+                    media.src = "if you.mp3"
+                }
+                media.play();
             }
             lastX = x;//赋值，为下一次计算做准备
             lastY = y;//赋值，为下一次计算做准备
