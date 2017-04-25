@@ -50,7 +50,7 @@
 
 </script>
 
-<body>
+<body onload="init()">
     <audio style="display:hide" id="musicBox" preload="metadata" controls autoplay="false">
     </audio>
 </body>
